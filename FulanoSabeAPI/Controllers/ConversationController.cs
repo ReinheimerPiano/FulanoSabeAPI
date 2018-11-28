@@ -61,6 +61,78 @@ namespace FulanoSabeAPI.Models
             return false;
         }
 
+        public CounterexampleCollection ListarContextos(String WorkId)
+        {
+            Conectar();
+
+            var result = _assistant.ListCounterexamples(WorkId);
+
+            return result;
+        }
+
+        public Counterexample CriarContador(String WorkId, String ContadorTitulo)
+        {
+            Conectar();
+
+            CreateCounterexample example = new CreateCounterexample()
+            {
+                Text = ContadorTitulo
+            };
+
+            var result = _assistant.CreateCounterexample(WorkId, example);
+
+            return result;
+        }
+
+        public Boolean DeletarContador(String WorkId, String ContadorTitulo)
+        {
+            Conectar();
+
+            var result = _assistant.DeleteCounterexample(WorkId, ContadorTitulo);
+
+            if (result.ResponseJson != "")
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
+
+        public MessageResponse EnviarMenssagem(String Msg,String WorkId, Boolean Continua, MessageResponse result)
+        {
+            if (Continua)
+            {
+                MessageRequest messageRequest0 = new MessageRequest()
+                {
+                    Input = new InputData()
+                    {
+                        Text = Msg
+                    }
+                };
+
+                var result0 = _assistant.Message(WorkId, messageRequest0);
+
+                return result0;
+            } else
+            {
+
+                MessageRequest messageRequest1 = new MessageRequest()
+                {
+                    Input = new InputData()
+                    {
+                        Text = Msg
+                  },
+                    Context = result.Context
+                };
+
+                var result1 = _assistant.Message(WorkId, messageRequest1);
+
+                return result1;
+            }
+
+        }
 
     }
 }
