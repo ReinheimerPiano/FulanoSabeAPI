@@ -13036,11 +13036,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mpiano\\Source\\Workspaces\\FulanoSabeAPI\\FulanoSabeAPI\\FulanoSabeAPI.csproj",
+      "projectUniqueName": "C:\\Users\\mpiano\\Desktop\\FulanoSabeAPI\\FulanoSabeAPI\\FulanoSabeAPI.csproj",
       "projectName": "FulanoSabeAPI",
-      "projectPath": "C:\\Users\\mpiano\\Source\\Workspaces\\FulanoSabeAPI\\FulanoSabeAPI\\FulanoSabeAPI.csproj",
+      "projectPath": "C:\\Users\\mpiano\\Desktop\\FulanoSabeAPI\\FulanoSabeAPI\\FulanoSabeAPI.csproj",
       "packagesPath": "C:\\Users\\mpiano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mpiano\\Source\\Workspaces\\FulanoSabeAPI\\FulanoSabeAPI\\obj\\",
+      "outputPath": "C:\\Users\\mpiano\\Desktop\\FulanoSabeAPI\\FulanoSabeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
